@@ -1,5 +1,0 @@
-git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch estat_avia_tf_apal_en.csv' HEAD
-
-git add CA2_Statistics_Code_sba23021.ipynb
-c
-
