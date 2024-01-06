@@ -15,7 +15,7 @@ review_df = pd.DataFrame(review_data)
 # Crosstab to get the data in the required format
 review_crosstab = pd.crosstab(review_df['Sentiment'], review_df['Airline'], values=review_df['Score'], aggfunc='sum', margins=False)
 
-# Your data for Supervised Learning
+# Supervised Learning Results
 data_supervised = pd.DataFrame({
     'Model': ['Decision Tree Classifier', 'Random Forest', 'KNN', 'SVC', "GridSearchCV('C': 1000, 'gamma': 0.01})",
               "GridSearchCV('C': 1000, 'gamma': 0.001})"],
@@ -23,7 +23,7 @@ data_supervised = pd.DataFrame({
     'Accuracy_Enriched (%)': [87.44, 91.77, 87.44, 87.01, 0, 91.04]  # Adjusted length
 })
 
-# Bar chart for Supervised Learning
+# Supervised Learning Results
 fig_supervised = px.bar(
     data_supervised,
     x='Model',
@@ -32,7 +32,7 @@ fig_supervised = px.bar(
     title='Supervised Learning'
 )
 
-# Your data for GridSearchCV Feature Reduction
+# Cross Validation and Feature Reduction Results
 data_feature_reduction = pd.DataFrame({
     'Country_Vehicle': ['IE_CAR', 'IE_BUS', 'IE_TRN'],
     'Feature_No': [2, 2, 2],
@@ -41,7 +41,7 @@ data_feature_reduction = pd.DataFrame({
     'Accuracy_Enriched (%)': [98.67, 81.54, 89.59]
 })
 
-# Bar chart for GridSearchCV Feature Reduction
+# Bar chart Cross Validation and Feature Reduction Results
 fig_feature_reduction = px.bar(
     data_feature_reduction,
     x='Country_Vehicle',  # Use 'Country_Vehicle' as the x-axis
@@ -50,7 +50,7 @@ fig_feature_reduction = px.bar(
     title='Cross Validation and Feature Reduction'
 )
 
-# Your data for Unsupervised Learning
+# Unsupervised Learning Data
 data_unsupervised = pd.DataFrame({
     'Vehicle': ['CAR', 'BUS', 'TRN'],
     'Silhouetter_Score': [0.49, 0.41, 0.39],
